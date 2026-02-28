@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Change Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app" class="hidden">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                        <path d="M16 3l2 2-2 2"/>
+                    </svg>
+                    <span>Name Change Document</span>
+                </div>
+                <button class="close-btn" id="closeBtn" aria-label="Close">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="current-name-section">
+                <div class="label">Current Identity</div>
+                <div class="current-name">
+                    <span id="currentFirstName">John</span>
+                    <span id="currentLastName">Doe</span>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="form-section">
+                <div class="label">New Identity</div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="newFirstName">First Name</label>
+                        <input type="text" id="newFirstName" placeholder="Enter first name" maxlength="20" autocomplete="off" spellcheck="false">
+                        <div class="char-count"><span id="firstCount">0</span>/<span id="firstMax">20</span></div>
+                    </div>
+                    <div class="input-group">
+                        <label for="newLastName">Last Name</label>
+                        <input type="text" id="newLastName" placeholder="Enter last name" maxlength="20" autocomplete="off" spellcheck="false">
+                        <div class="char-count"><span id="lastCount">0</span>/<span id="lastMax">20</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="preview" class="preview hidden">
+                <div class="preview-label">Preview</div>
+                <div class="preview-content">
+                    <span class="old-name" id="previewOld">John Doe</span>
+                    <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"/>
+                        <polyline points="12 5 19 12 12 19"/>
+                    </svg>
+                    <span class="new-name" id="previewNew">New Name</span>
+                </div>
+            </div>
+
+            <div id="errorMsg" class="error-msg hidden"></div>
+            <div id="successMsg" class="success-msg hidden"></div>
+
+            <button class="submit-btn" id="submitBtn" disabled>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                    <path d="M16 3l2 2-2 2"/>
+                </svg>
+                <span>Confirm Name Change</span>
+            </button>
+
+            <div class="footer">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                <span>Names are validated against a profanity filter</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

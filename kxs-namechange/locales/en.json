@@ -1,0 +1,19 @@
+{
+    "NameChangeMenu": {
+        "Title": "Name Change",
+        "Submit": "Confirm Name Change",
+        "FirstName": "First Name",
+        "DescriptionFirstName": "Enter your new first name",
+        "LastName": "Last Name",
+        "DescriptionLastName": "Enter your new last name"
+    },
+    "Notifications": {
+        "NameChangeSuccess": "Name successfully changed to %s %s",
+        "CooldownActive": "Please wait before changing your name again",
+        "JobRequired": "You don't have the required job to use this",
+        "BadWordDetected": "That name contains a restricted word",
+        "InvalidCharacters": "Names can only contain letters, hyphens, and apostrophes",
+        "NameTooShort": "Names must be at least %d characters",
+        "NameTooLong": "Names cannot exceed %d characters"
+    }
+}
